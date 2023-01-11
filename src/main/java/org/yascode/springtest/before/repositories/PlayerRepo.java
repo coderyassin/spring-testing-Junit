@@ -1,4 +1,4 @@
-package org.yascode.springtest.repositories;
+package org.yascode.springtest.before.repositories;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -22,18 +22,17 @@ public class PlayerRepo {
     }
 
 
-    public PlayerRepo getName(String name){
+    public String getName(String name){
         Optional<String> player = players.stream().filter(p -> p.equals(name)).findFirst();
-        String p = player.orElse(null);
-        return new PlayerRepo(p);
+        return player.orElse(null);
     }
 
-    @Override
+    /*@Override
     public boolean equals(Object obj) {
         PlayerRepo playerRepo = (PlayerRepo) obj;
         if(!this.players.equals(((PlayerRepo) obj).players)) return false;
         return this.name.equals(playerRepo.name);
-    }
+    }*/
 
     public String getName() {
         return name;
