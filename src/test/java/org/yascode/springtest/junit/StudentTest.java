@@ -1,5 +1,7 @@
 package org.yascode.springtest.junit;
 
+import org.hamcrest.MatcherAssert;
+import org.hamcrest.Matchers;
 import org.junit.jupiter.api.*;
 
 import java.util.MissingFormatArgumentException;
@@ -49,7 +51,9 @@ class StudentTest {
 
     @Test
     void newTest(){
-        Assertions.assertTrue("Yassin".equalsIgnoreCase("YASSIN"));
+        //Assertions.assertTrue("Yassin".equalsIgnoreCase("YASSIN"));
+        //org.assertj.core.api.Assertions.assertThat(student.getName()).isEqualTo("Yassin");
+        MatcherAssert.assertThat(student.getName(), Matchers.is("Yassin"));
     }
 
     @AfterEach
