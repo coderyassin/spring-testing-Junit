@@ -47,6 +47,11 @@ class StudentTest {
                 () -> student.getException());
     }
 
+    @Test
+    void newTest(){
+        Assertions.assertTrue("Yassin".equalsIgnoreCase("YASSIN"));
+    }
+
     @AfterEach
     void afterEachTest() {
         System.out.println("This method will be executed after each test");
