@@ -1,13 +1,11 @@
 package org.yascode.springtest.junit;
 
-import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.Disabled;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-@Disabled
+//@Disabled
+@Tag("person")
 class PersonTest {
 
     private static Person person;

@@ -8,6 +8,7 @@ import java.util.MissingFormatArgumentException;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+@Tag("student")
 class StudentTest {
 
     private static Student student;
