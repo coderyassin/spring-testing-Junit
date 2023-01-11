@@ -73,6 +73,13 @@ class StudentTest {
         }
     }
 
+    @Test
+    @DisplayName("Hi Function")
+    @RepeatedTest(value = 5, name = "{displayName} : {currentRepetition} | {totalRepetitions}")
+    void myTest(){
+        System.out.println("HI");
+    }
+
     @AfterEach
     void afterEachTest() {
         System.out.println("This method will be executed after each test");
