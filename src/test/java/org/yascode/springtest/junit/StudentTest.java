@@ -31,6 +31,13 @@ class StudentTest {
         Assertions.assertTrue(student.getAge().equals("26"), "Age not Matches");
     }
 
+    @Test
+    public void testing(){
+        Assertions.assertAll("Student Data",
+                () -> Assertions.assertEquals(student.getName(),"Yassin","Name not Matches"),
+                () -> Assertions.assertEquals(student.getAge(),"26","Age  not Matches"));
+    }
+
     @AfterEach
     void afterEachTest() {
         System.out.println("This method will be executed after each test");
