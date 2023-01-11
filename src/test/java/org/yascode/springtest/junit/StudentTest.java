@@ -2,6 +2,8 @@ package org.yascode.springtest.junit;
 
 import org.junit.jupiter.api.*;
 
+import java.util.MissingFormatArgumentException;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class StudentTest {
@@ -36,6 +38,13 @@ class StudentTest {
         Assertions.assertAll("Student Data",
                 () -> Assertions.assertEquals(student.getName(),"Yassin","Name not Matches"),
                 () -> Assertions.assertEquals(student.getAge(),"26","Age  not Matches"));
+    }
+
+    @Test
+    @DisplayName("Test Student By Id")
+    public void findById() {
+        Assertions.assertThrows(RuntimeException.class,
+                () -> student.getException());
     }
 
     @AfterEach
