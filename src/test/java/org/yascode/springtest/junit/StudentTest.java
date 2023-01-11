@@ -57,6 +57,22 @@ class StudentTest {
         MatcherAssert.assertThat(student.getName(), Matchers.is("Yassin"));
     }
 
+    @Nested
+    class nestedStudent {
+
+        @BeforeEach
+        void setUp() {
+            System.out.println("In");
+        }
+
+        @Test
+        void nestedTest(){
+            Student student = new Student();
+            student.setName("Yassin");
+            org.assertj.core.api.Assertions.assertThat(student.getName()).isEqualTo("Yassin");
+        }
+    }
+
     @AfterEach
     void afterEachTest() {
         System.out.println("This method will be executed after each test");
