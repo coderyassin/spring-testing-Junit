@@ -12,7 +12,7 @@ class StudentTest {
     public static void instantiateStudent() {
         student = new Student();
         student.setName("Yassin");
-        student.setAge(26);
+        student.setAge("26");
         System.out.println("This method will be executed before the execution of all the tests of this test class");
     }
 
@@ -23,12 +23,12 @@ class StudentTest {
 
     @Test
     public void getName() {
-        Assertions.assertEquals(student.getName(), "Yassin");
+        Assertions.assertTrue(student.getName().equals("Yassin"), "Name not Matches");
     }
 
     @Test
     public void getAge() {
-        Assertions.assertEquals(student.getAge(), 26);
+        Assertions.assertTrue(student.getAge().equals("26"), "Age not Matches");
     }
 
     @AfterEach
