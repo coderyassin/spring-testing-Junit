@@ -5,8 +5,7 @@ import org.junit.jupiter.api.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 //@Disabled
-@Tag("person")
-class PersonTest {
+class PersonTest implements PersonInterface {
 
     private static Person person;
 
@@ -33,6 +32,11 @@ class PersonTest {
                                 () -> Assertions.assertEquals(person.getPhone2(),"01255582855","Phone  not Matches")
                         )
         );
+    }
+
+    @Test
+    void simpleTest(){
+        System.out.println("simpleTest............");
     }
 
 }
